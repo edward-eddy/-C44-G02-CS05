@@ -146,8 +146,51 @@
             #endregion
             #endregion
 
+            #region Null Propagation Operator
+            // Null Propagation Operator ?
+
+            //double X = default; // 0
+            //char C = default;
+            //bool B = default;
+
+            //Console.WriteLine(C);
 
 
+            //int[] Arr = default; // null
+
+            //int[] Arr = { 1, 2, 3, 4, 5 };
+
+
+            //for(int i = 0; (Arr is not null) && i < Arr.Length; i++)
+            //    Console.WriteLine(Arr[i]);
+
+            /*              OR              */
+
+            //for (int i = 0; i < Arr?.Length; i++)
+            //        Console.WriteLine(Arr[i]);
+
+
+            //Best Practice:
+
+            //if (Arr is not null)
+            //{
+            //    for (int i = 0; i < Arr.Length; i++)
+            //        Console.WriteLine(Arr[i]);
+            //}
+
+
+            // E?.Name // null
+            // E?.Department.DeptName
+
+            //int Len = Arr is not null ? Arr.Length : 0;
+
+            //int? Len = Arr?.Length;
+
+            //int Len = Arr?.Length is not null ? Arr.Length : 0;
+            //int Len = Arr?.Length ?? -1;
+
+            //Console.WriteLine(Len); 
+            #endregion
 
 
         }
