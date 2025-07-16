@@ -1,5 +1,61 @@
 ﻿namespace Demo
 {
+    #region Access Modifiers
+    // Access Modifiers: C# Keywords Indicate Accessability Scope
+    // 1. private   ------>
+    // 2. private protected
+    // 3. protected 
+    // 4. internal  ------>
+    // 5. internal protected
+    // 6. public    ------>
+
+
+    // What Can Write Inside The Namespace?
+    // 1. Class
+    // 2. Struct
+    // 3. Interface
+    // 4. Enum
+
+
+    // Access Modifiers Inside The Namespace
+    // 1. enternal  :   Accessable At Tha Same Project
+    // 2. public    :   Everywhere
+
+    // Default Access Modifier Inside The Namespace Is "internal"
+
+
+    // What Can Write Inside Tha Class Or Struct
+    // 1. Attributes [Filed - Member Variable]
+    // 2. Properties [Full Property - Automatic Property - Special Property(Indexer)]
+    // 3. Methods - Functions
+    // 4. Event
+
+    // Access Modifiers Inside The Class
+    // 1. private   
+    // 2. private protected
+    // 3. protected 
+    // 4. internal  
+    // 5. internal protected
+    // 6. public    
+
+
+    // Access Modifiers Inside The Struct
+    // 1. private   : Inside The Same Class
+    // 2. internal  : Inside The Same Project
+    // 3. public    : Everywhere
+
+    // Default Access Modifier Inside The Class Or Struct Is "private"
+
+    // What Can Write Inside The Interface
+    // 1. Signature Of Methods [ Return Type - Name - Parameter]
+    // 2. Signature Of Property
+    // 3. Default Implemented Method [C# 8.0 .NET Core 3.1]
+
+    // All Access Modifiers Except "private" -> with Default Implemented Method
+
+    // Default Access Modifiers Inside The Interface is "public" 
+    #endregion
+
     internal class Program
     {
 
@@ -285,9 +341,15 @@
             // 2. ApplicationException 
             #endregion
 
+            // Class Library
 
+            //Common.TypeA typeA = new Common.TypeA(); // Invalid -> TypeA class is internal
 
+            Common.TypeB typeB = new Common.TypeB();    // Valid -> TypeB class is public
 
+            // typeB.X = 12;     // Invalid private
+            // typeB.Y = 13;     // Invalid internal
+            typeB.Z = 14;        // Valid 
 
         }
     }
