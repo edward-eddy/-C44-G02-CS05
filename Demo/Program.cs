@@ -2,6 +2,80 @@
 {
     internal class Program
     {
+
+        #region Exception Handeling And Protictive Code Functions
+        //static void DoSomeCode()
+        //{
+        //    int X, Y, Z;
+        //    X = int.Parse(Console.ReadLine());
+        //    Y = int.Parse(Console.ReadLine());
+
+        //    Z = X / Y;
+
+        //    int[] Arr = { 1, 2, 3 };
+        //    Arr[99] = 10;
+        //}
+
+        static void DoSomeCode()
+        {
+            try
+            {
+                int X, Y, Z;
+                X = int.Parse(Console.ReadLine());
+                Y = int.Parse(Console.ReadLine());
+
+                Z = X / Y;
+
+                int[] Arr = { 1, 2, 3 };
+                Arr[99] = 10;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Finally");
+                // Release | Deallocate | Disconnect | Dispose UnManaged Resource
+            }
+        }
+        static void DoSomeProtictiveCode()
+        {
+            try
+            {
+                int X, Y, Z, I;
+                do
+                {
+                    Console.WriteLine("Enter First Number : ");
+                }
+                while (!int.TryParse(Console.ReadLine(), out X));
+
+                do
+                {
+                    Console.WriteLine("Enter Second Number : ");
+                }
+                while (!int.TryParse(Console.ReadLine(), out Y) || Y == 0);
+
+                Z = X / Y;
+
+                do
+                {
+                    Console.WriteLine("Enter Index Number (0 => 2) : ");
+                }
+                while (int.TryParse(Console.ReadLine(), out I) || I > 2 || I < 0);
+
+
+                int[] Arr = { 1, 2, 3 };
+                Arr[I] = 10;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+        }
+        #endregion
+
         static void Main(string[] args)
         {
 
@@ -191,6 +265,28 @@
 
             //Console.WriteLine(Len); 
             #endregion
+
+            #region Exception Handeling And Protictive Code
+            // Exception Handeling And Protictive Code
+
+            //DoSomeCode();
+            //DoSomeProtictiveCode();
+
+            //Console.WriteLine("Hello After Exception");
+
+            // Exception
+            // 1. SystomExcoption
+            //   1.1.FormatException
+            //   1.2.IndexOutOfRangeException
+            //   1.3.NullReferenceException
+            //   1.4.ArithmoticException
+            //      1.4.1.OverflomException
+            //      1.4.2.DivideByZeroException
+            // 2. ApplicationException 
+            #endregion
+
+
+
 
 
         }
