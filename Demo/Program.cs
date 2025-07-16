@@ -56,6 +56,33 @@
     // Default Access Modifiers Inside The Interface is "public" 
     #endregion
 
+    #region Enums
+    enum Season : byte
+    {
+        Spring = 250,
+        Winter,
+        Summer,
+        Autumn
+    }
+
+    enum Weekday
+    {
+        Saturday,
+        Sunday,
+        Monday,
+        Tuseday,
+        Wednesday,
+        Thursday,
+        Friday
+    }
+
+    enum Gender
+    {
+        Male,
+        Female
+    }
+    #endregion
+
     internal class Program
     {
 
@@ -341,15 +368,51 @@
             // 2. ApplicationException 
             #endregion
 
+            #region Access Modifiers
             // Class Library
 
             //Common.TypeA typeA = new Common.TypeA(); // Invalid -> TypeA class is internal
 
-            Common.TypeB typeB = new Common.TypeB();    // Valid -> TypeB class is public
+            //Common.TypeB typeB = new Common.TypeB();    // Valid -> TypeB class is public
 
             // typeB.X = 12;     // Invalid private
             // typeB.Y = 13;     // Invalid internal
-            typeB.Z = 14;        // Valid 
+            //typeB.Z = 14;        // Valid  
+            #endregion
+
+            #region Enum
+            // Enum : Value Types
+
+
+            //Season S01 = Season.Autumn;
+
+            //S01 = Season.Summer;
+
+
+            //Console.WriteLine(S01);
+
+            // Stack Memory
+
+            // CLR Represent Enum As Integer Value In Memory
+
+            //Gender G01 = Gender.Male;
+            //Gender G01 = (Gender) 1;
+
+            //Console.WriteLine(G01);
+
+
+            //Gender G01 = (Gender) Enum.Parse(typeof(Gender), Console.ReadLine(), true);
+
+            //Gender G01;
+            //Enum.TryParse(typeof(Gender), Console.ReadLine(), true, out object O1);
+
+            //G01 = (Gender) O1;
+
+            //Console.WriteLine(G01); 
+            #endregion
+
+
+
 
         }
     }
