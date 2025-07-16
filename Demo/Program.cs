@@ -5,7 +5,6 @@
         static void Main(string[] args)
         {
 
-
             #region Boxing And UnBoxing
             // Boxing And UnBoxing
             // Boxing : Casting From ValueType To ReferenceType
@@ -43,6 +42,89 @@
             // Dog = (Dog) Animal => Animal is Dog
             // Child = Parent => Parent is  child 
             #endregion
+
+            #region Nullable Types
+            // Nullable Types
+
+            // Value Type 
+            // Reference Type
+
+            //int X = 6;
+
+            //X = null; // not Valid
+
+
+            // Nullable Value types => Value type Allow Null As a Valid Value
+
+            //Nullable<int> : Allow Int Values + Null As a Valid Value
+            //int? Age = 20;
+
+            //Age = null;
+
+
+            // Nullable<double> : Allow Double Values + Null as a Valid Values
+            //double? Salary = 4000.5;
+
+            //Salary = null;
+
+            //int X = 5;
+
+            // Y : Nullable<Int>
+            // Y : Allow int Value or Null
+
+            //int? Y = /*(int?)*/ X;
+
+            // Implicit Casting
+            // Safe Casting
+
+            //Console.WriteLine(Y);
+
+
+            //int? X = 5;
+
+            // Y : int
+            // Y : Allow int Value Only
+
+            //int Y = (int) X;
+            // Explicit Casting
+            // May Throw Exception
+
+
+            // Defensive Code
+            //if (X != null)
+            //    Y = (int)X;
+            //else
+            //    Y = 0;
+
+            // ==============
+
+            //if (X is not null)
+            //    Y = (int)X;
+            //else
+            //    Y = 0;
+
+            //============
+
+            //if (X.HasValue)
+            //    Y = X.Value;
+            //else
+            //    Y = 0;
+
+            // ==============
+
+            //Y = X.HasValue ? X.Value : 0;
+
+            // ==============
+
+            // Null Coalescing Operator ??
+
+            //Y = X ?? 0; // Syntax Sugar : X is not null ? X.Value : 0;
+
+            //Console.WriteLine(Y); 
+            #endregion
+
+
+
 
 
         }
