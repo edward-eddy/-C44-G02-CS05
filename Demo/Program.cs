@@ -49,6 +49,10 @@
             // Value Type 
             // Reference Type
 
+            #region Nullable Value Types
+
+            // 1. Nullable Value Types
+
             //int X = 6;
 
             //X = null; // not Valid
@@ -121,6 +125,25 @@
             //Y = X ?? 0; // Syntax Sugar : X is not null ? X.Value : 0;
 
             //Console.WriteLine(Y); 
+            #endregion
+
+
+            #region Nullable Reference Types
+            // 2. Nullable Reference Types [C# 10.0 | .NET 6.0]
+
+            //string Message = "Hello";
+            //Message = null;
+
+            //Console.WriteLine(Message);
+
+
+            //string Message01 = null;    // Required
+
+            //string? Message02 = null;   // Optional
+
+            //Console.WriteLine(Message01.Length);
+            //Console.WriteLine(Message02); 
+            #endregion
             #endregion
 
 
