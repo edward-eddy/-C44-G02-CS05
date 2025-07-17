@@ -83,6 +83,15 @@
     }
     #endregion
 
+    [Flags]
+    enum Permission
+    {
+        Read = 8,
+        Write = 4,
+        Execute = 2,
+        Delete = 1
+    }
+
     internal class Program
     {
 
@@ -411,9 +420,23 @@
             //Console.WriteLine(G01); 
             #endregion
 
+            #region Advanced Enum
+            //Permission Per01 = Permission.Read;
+            //Per01 ^= Permission.Delete; // Toggle
 
+            //Per01 |= Permission.Delete; // Add Permession
 
+            //Per01 &= ~(Permission.Delete); // ~ Not Bitwise
 
+            // & -> Check Permission
+
+            //if((Per01&Permission.Delete) == Permission.Delete)
+            //    Console.WriteLine("Exists");
+            //else
+            //    Console.WriteLine("Not Exists");
+
+            //    Console.WriteLine(Per01); 
+            #endregion
         }
     }
 }
