@@ -33,6 +33,15 @@
         November,
         December
     }
+    [Flags]
+    enum Permission
+    {
+        Read = 8,
+        Write = 4,
+        Execute = 2,
+        Delete = 1
+    }
+
     internal class Program
     {
         static void SeasonRange(Seasons Season)
@@ -78,6 +87,25 @@
 
             //SeasonRange((Seasons)SeasonObj);
             #endregion
+
+            #region Q04
+            /*
+                Assign the following Permissions (Read, write, Delete, Execute) in a form of Enum.
+
+                Create Variable from previous Enum to Add and Remove Permission from variable, 
+                check if specific Permission is existed inside variable
+            */
+
+            //Permission Per01 = Permission.Read;
+            //Per01 ^= Permission.Write; // Toggle to Add and Remove Permission from variable
+
+            //// Check if specific Permission is existed inside variable
+            //Console.WriteLine((Per01 & Permission.Write) == Permission.Write);      // True
+            //Console.WriteLine((Per01 & Permission.Execute) == Permission.Execute);  // False
+
+            #endregion
+
+
         }
     }
 }
